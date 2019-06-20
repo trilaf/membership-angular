@@ -1,0 +1,11 @@
+<form [formGroup]="updtprofileForm" novalidate>
+<div class="card">
+  <div class="card-body">
+    <h3 class="card-text">Update Profile</h3>
+    <div class="mb-4"><input type="text" placeholder="Name" class="form-control" formControlName="name"></div>
+    <div class="alert alert-warning" *ngIf="updtprofileForm.controls['name'].invalid && showAlert">Nama harus diisi</div>
+    <button class="btn btn-sm btn-primary font-weight-bold gapbtn" (click)="onUpdte()">Update</button>
+    <button class="btn btn-sm btn-danger font-weight-bold" routerLink="/user/detail">Cancel</button>
+  </div>
+</div>
+</form>

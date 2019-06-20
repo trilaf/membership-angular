@@ -1,0 +1,21 @@
+.gapbtn {
+    margin-right: 5px;
+}
+
+.googlebtn {
+    background: red;
+    color: white;
+}
+
+.googlebtn:hover {
+    background: rgb(206, 1, 1);
+}
+
+.fbbtn{
+    background: blue;
+    color: white;
+}
+
+.fbbtn:hover {
+    background: rgb(0, 0, 190);
+}
