@@ -4,10 +4,6 @@
   "newProjectRoot": "projects",
   "projects": {
     "membership": {
-      "deploy": {
-        "builder": "@angular/fire:deploy",
-        "options": {}
-      },
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
