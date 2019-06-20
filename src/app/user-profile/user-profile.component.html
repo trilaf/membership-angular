@@ -1,0 +1,15 @@
+  <h3>Hi, Guest</h3>
+  <p>Login to view magic...</p>
+
+  <button (click)="auth.googleLogin()">
+    <i class="fab fa-google"></i> Connect Google
+  </button>
+
+
+  <div>
+    <h3>Hi, {{ user.displayName }}</h3>
+    <img [src]="user.photoURL">
+    <p>UID : {{ user.uid }}</p>
+    <p>Status : {{ stat }}</p>
+    <button (click)="auth.signOut()">Sign Out</button>
+  </div>

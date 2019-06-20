@@ -1,0 +1,15 @@
+<form [formGroup]="loginForm" novalidate>
+<div class="card align-items-center" style="width: 25%; padding: 15px;">
+    <h2 class="card-title font-weight-bold">Login</h2>
+    <div *ngIf="loginForm.invalid && showAlert" class="alert alert-danger">E-mail dan Password Tidak Sesuai</div>
+    <div class="input-group mb-4"><input type="text" formControlName="email" required class="form-control" placeholder="E-mail"/></div>
+    <div class="input-group mb-4"><input type="password" formControlName="password" required class="form-control" placeholder="Password"/></div>
+    <div><button class="btn btn-sm btn-primary font-weight-bold gapbtn" (click)="onSubmit()">Login</button>
+    </div>
+    <div style="margin-top: 10px"><button class="btn btn-sm googlebtn font-weight-bold gapbtn" (click)="auth.googleLogin()">Google Login</button>
+    <button class="btn btn-sm fbbtn font-weight-bold" (click)="auth.fbLogin()">Facebook Login</button></div>
+    <div>Belum punya akun?<button class="btn btn-sm btn-link font-weight-bold" routerLink="/register" routerLinkActive="active">Register</button></div>
+  </div>
+</form>
+<!--<p>{{ loginForm.status | json }}</p>
+<p>{{ loginForm.value | json }}</p>-->

@@ -1,0 +1,14 @@
+<div class="card rounded-0">
+  <div class="card-body">
+    <img [src]="user.photoURL" width="100px">
+    <h4 class="font-weight-bold">Hello, {{ user.displayName }} !</h4>
+    <div class="card-text"><h5>Your Profile</h5>
+      <p>Email    : {{ user.email }} ( {{ user.stringEmailVerified }} )</p>
+    </div>
+    <button class="btn btn-sm btn-warning font-weight-bold" style="margin-right: 5px" (click)="auth.authSignOut()">Sign Out</button>
+    <button *ngIf="user.emailVerified == false" class="btn btn-sm btn-primary font-weight-bold" (click)="auth.verifyAcc()" style="margin-right: 5px">Verify</button>
+    <button class="btn btn-sm btn-primary font-weight-bold" style="margin-right: 5px" routerLink="/user/update">Update Profile</button> 
+    <button class="btn btn-sm btn-info font-weight-bold" routerLink="/user/list">Users List</button>
+  </div>
+</div>
+<router-outlet></router-outlet>
